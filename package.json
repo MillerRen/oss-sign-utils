@@ -1,0 +1,21 @@
+{
+  "name": "@renyufei/oss-sign-utils",
+  "version": "1.0.0",
+  "description": "aliyun oss signature utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "aliyun",
+    "oss",
+    "signature"
+  ],
+  "author": "MillerRen",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isstring": "^4.0.1"
+  }
+}
