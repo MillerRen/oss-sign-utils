@@ -1,5 +1,5 @@
 {
-  "name": "@renyufei/oss-sign-utils",
+  "name": "oss-sign-utils",
   "version": "1.0.0",
   "description": "aliyun oss signature utils",
   "main": "index.js",
