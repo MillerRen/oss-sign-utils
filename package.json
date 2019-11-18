@@ -1,6 +1,6 @@
 {
   "name": "oss-sign-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "aliyun oss signature utils",
   "main": "index.js",
   "scripts": {
