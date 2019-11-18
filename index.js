@@ -1,7 +1,7 @@
-import hmacSha1 from 'crypto-js/hmac-sha1'
-import base64 from 'crypto-js/enc-base64'
-import isString from 'lodash.isstring'
-import isArray from 'lodash.isarray'
+const hmacSha1 = require('crypto-js/hmac-sha1')
+const base64 = require('crypto-js/enc-base64')
+const isString = require('lodash.isstring')
+const isArray = require('lodash.isarray')
 
 /**
  *
@@ -48,7 +48,7 @@ export function buildCanonicalizedResource (resourcePath, parameters) {
  * @param {String} expires
  * @return {String} canonicalString
  */
-export function canonicalString (method, resourcePath, headers = {}, parameters, expires) {
+export function buildCanonicalString (method, resourcePath, headers = {}, parameters, expires) {
   const OSS_PREFIX = 'x-oss-'
   const ossHeaders = []
   const headersToSign = {}
