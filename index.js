@@ -10,7 +10,7 @@ const isArray = require('lodash.isarray')
  * @param {Object} parameters
  * @return
  */
-export function buildCanonicalizedResource (resourcePath, parameters) {
+exports.buildCanonicalizedResource = function (resourcePath, parameters) {
   let canonicalizedResource = `${resourcePath}`
   let separatorString = '?'
 
@@ -49,7 +49,7 @@ export function buildCanonicalizedResource (resourcePath, parameters) {
  * @param {String} expires
  * @return {String} canonicalString
  */
-export function buildCanonicalString (method, resourcePath, headers = {}, parameters, expires) {
+exports.buildCanonicalString = function (method, resourcePath, headers = {}, parameters, expires) {
   const OSS_PREFIX = 'x-oss-'
   const ossHeaders = []
   const headersToSign = {}
@@ -83,7 +83,7 @@ export function buildCanonicalString (method, resourcePath, headers = {}, parame
  * @param {String} accessKeySecret
  * @param {String} canonicalString
  */
-export function computeSignature (accessKeySecret, canonicalString) {
+exports.computeSignature = function (accessKeySecret, canonicalString) {
   return base64.stringify(hmacSha1(canonicalString, accessKeySecret))
 }
 
@@ -92,6 +92,6 @@ export function computeSignature (accessKeySecret, canonicalString) {
  * @param {String} accessKeySecret
  * @param {String} canonicalString
  */
-export function authorization (accessKeyId, accessKeySecret, canonicalString) {
+exports.authorization = function (accessKeyId, accessKeySecret, canonicalString) {
   return `OSS ${accessKeyId}:${this.computeSignature(accessKeySecret, canonicalString)}`
 }
