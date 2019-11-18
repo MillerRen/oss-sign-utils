@@ -1,3 +1,4 @@
+/* eslint-env node, commonjs */
 const hmacSha1 = require('crypto-js/hmac-sha1')
 const base64 = require('crypto-js/enc-base64')
 const isString = require('lodash.isstring')
